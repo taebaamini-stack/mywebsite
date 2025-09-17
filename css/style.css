@@ -1,0 +1,90 @@
+html {
+  background-color: darkgrey;
+}
+header {
+  background-color: aquamarine;
+}
+.profilbilde {
+  width: 200px;
+  height: auto;
+  border-radius: 20%;
+  display: block;
+  margin-right: auto;
+}
+nav ul {
+  list-style: none;
+  margin: 5%;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+nav ul li {
+  margin: 0;
+  padding: 0;
+}
+nav ul li a {
+  text-decoration: none;
+  color: blue;
+  font-style: oblique;
+  font-weight: bold;
+}
+.intro {
+  font-size: medium;
+  font-style: normal;
+  color: rgb(7, 1, 18);
+}
+
+.hobbybilder {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 10px;
+}
+.hobbybilder img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
+  background-color: aqua;
+  padding: 5px;
+}
+footer {
+  background-color: beige;
+  padding: 10px;
+
+  text-align: center;
+  color: blue;
+}
+/* Jeg har laget footer slik at den alltid sitter nederst på siden.
+  - Jeg bruker flex på body for å ordne header, main og footer vertikalt.
+  - Jeg setter main til flex: 1 slik at den fyller mellomrommet mellom header og footer.
+  På denne måten holder footer seg alltid nederst, selv når innholdet på siden er lite.
+*/
+html,
+body {
+  height: 100%;
+  margin: 0px;
+}
+body {
+  display: flex;
+  flex-direction: column;
+}
+main {
+  flex: 1;
+}
+.about-me {
+  background-color: azure;
+  color: black;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 20px 25px;
+  margin: 20px auto;
+}
+@media screen and (max-width: 600px) {
+  .hobbybilder img {
+    height: auto;
+    object-fit: contain;
+  }
+}
